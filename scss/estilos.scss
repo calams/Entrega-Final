@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "vars";
+
+/* Establezco la font de la pagina */
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // border: 1px solid red;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(217, 217, 217);
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1500px;
+}
+
+/* 
+|
+|
+| Seccion Nav
+|
+|
+*/
+
+header {
+  background-color: $colorMenu;
+}
+
+.navbar-collapse {
+  flex-grow: inherit;
+  background: $colorMenu;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 1.5rem;
+  margin: 15px;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.nav__container {
+  flex-direction: column;
+}
+
+/* Fin Seccion Nav */
+
+.titulo-productos {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  background-color: $colorMenu;
+}
+
+.mas-vendidos {
+  display: flex;
+  margin: 40px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+  .mas-vendidos {
+    flex-direction: column;
+  }
+}
+
+.footer {
+  text-align: center;
+  background-color: $colorMenu;
+  border: solid 5px;
+}
+
+.parrafo__lista {
+	display: flex;
+	align-items: center;
+	font-size: x-large;
+}
+
+
+
+$servicios: (
+	1: (
+		direccion: row,
+		color: rgba(86, 204, 141, 0.5),
+		parrafo: black
+	),
+	2: (
+		direccion: row-reverse,
+		color: rgba(32, 178, 170, 0.5),
+		parrafo: white
+	),
+	3: (
+		direccion: row,
+		color: rgba(86, 204, 141, 0.5),
+		parrafo: black
+	),
+	4: (
+		direccion: row-reverse,
+		color: rgba(32, 178, 170, 0.5),
+		parrafo: rgb(255, 255, 255)
+	)
+);
+
+@each $key, $value in $servicios {
+	.card-#{$key} {
+		display: flex;
+		margin-top: 20px;
+		border-radius: 20px;
+		width: 100%;
+		max-width: 1500px;
+		gap: 350px;
+		flex-direction: map-get( $value, direccion );
+		background-color: map-get( $value, color );
+	
+		img {
+			display: flex;
+			width: 20%;
+			border-radius: 20px;
+			margin: 20px;
+		}
+	
+		p {
+			@extend .parrafo__lista;
+			color: map-get( $value, parrafo );
+
+
+		}
+	}
+}
+
+
+.tipos-de-masaje {
+  font-size: large;
+  margin: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .gabinete, .domicilio, .desc__dom, .desc__gab {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* fin seccion servicios */
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.desc {
+  display: flex;
+  font-size: x-large;
+  justify-content: center;
+  max-width: 1500px;
+}
+
+.experiencias {
+  font-size: large;
+}
+
+.img__nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 1500px;
+
+  img {
+    width: 100%;
+    padding: 20px;
+    border-radius: 40px;
+
+    &:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    &:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/3;
+    }
+
+    &:nth-child(3) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    &:nth-child(4) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .img__nosotros {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* fin area nosotros */
+
+.contacto {
+  font-size: xx-large;
+  margin: 20px;
+}
+
+.input {
+  width: 300px;
+  text-align: center;
+
+  &:focus {
+    height: 50px;
+  }
+}
+
+.texto-centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form1 {
+  margin: 20px;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+}
+
+.form2 {
+  width: 300px;
+  font-size: x-large;
+}
+
+.motivo {
+  margin: 20px;
+  font-size: xx-large;
+}
+
+.area-consulta {
+  margin: 30px;
+}
+
+.opciones, {
+  margin: 0px 0px 0px 30px;
+}
+
+
+
+@mixin boton ($col, $bg) {
+	display: inline-block;
+	padding: 10px;
+	color: $col;
+	background-color: $bg;
+}
+
+.boton__borrar {
+	@include boton (black, lightgray)
+}
+
+.boton__enviar {
+	@include boton (white,lightseagreen )
+}

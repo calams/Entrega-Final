@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* Establezco la font de la pagina */
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #d9d9d9;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1500px;
+  margin-top: 20px;
+}
+
+
+
+
+
+/* 
+|
+|
+| Seccion Nav
+|
+|
+*/
+header {
+  background-color: lightseagreen;
+}
+
+.navbar-collapse {
+  -webkit-box-flex: inherit;
+      -ms-flex-positive: inherit;
+          flex-grow: inherit;
+  background: lightseagreen;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 1.5rem;
+  margin: 15px;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.nav__container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* Fin Seccion Nav */
+.titulo-productos {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  background-color: lightseagreen;
+}
+
+.fondo-prod {
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+}
+
+.populares {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+
+.mas-vendidos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 30px;
+  justify-content: center;
+  gap: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;        
+}
+
+.btnclr {
+  background-color: lightseagreen;
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+  .mas-vendidos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: lightseagreen;
+  border: solid 2px;
+  font-size: large;
+  
+  
+  
+}
+
+.parrafo__lista, .card-1 p, .card-2 p, .card-3 p, .card-4 p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: x-large;
+}
+
+.card-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1500px;
+  gap: 350px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgba(86, 204, 141, 0.5);
+}
+
+.card-1 img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.card-1 p {
+  color: black;
+}
+
+.card-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1500px;
+  gap: 350px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: rgba(32, 178, 170, 0.5);
+}
+
+.card-2 img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.card-2 p {
+  color: white;
+}
+
+.card-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1500px;
+  gap: 350px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgba(86, 204, 141, 0.5);
+}
+
+.card-3 img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.card-3 p {
+  color: black;
+}
+
+.card-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1500px;
+  gap: 350px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: rgba(32, 178, 170, 0.5);
+}
+
+.card-4 img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.card-4 p {
+  color: white;
+}
+
+.titulo-msj {
+  text-align: center;
+  margin-top: 30px;
+  background-color: #20b2aa;
+  color: white;
+}
+
+.tipos-de-masaje {
+  font-size: large;
+  max-width: 1500px;
+  margin-top: 50px;
+  background-color: rgb(133, 255, 189,);
+  background-image: linear-gradient(45deg, #d3d3d3 20%, #20b2aa 80%);
+}
+
+@media screen and (max-width: 500px) {
+  .gabinete, .domicilio, .desc__dom, .desc__gab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* fin seccion servicios */
+.nosotros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: x-large;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1500px;
+}
+
+.experiencias {
+  font-size: large;
+}
+
+.img__nosotros {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  max-width: 1500px;
+}
+
+.img__nosotros img {
+  width: 100%;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.img__nosotros img:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.img__nosotros img:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.img__nosotros img:nth-child(3) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.img__nosotros img:nth-child(4) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+@media screen and (max-width: 500px) {
+  .img__nosotros {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* fin area nosotros */
+.contacto {
+  font-size: xx-large;
+  margin: 20px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d9d9d9;
+  
+  
+  
+   
+}
+
+.formulario {
+  max-width: 1500px;
+  width: 90%;
+  
+}
+
+
+
+
+/*# sourceMappingURL=estilos.css.map */
